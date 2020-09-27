@@ -1,3 +1,12 @@
 body {
     background-color: aquamarine;
 }
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+}

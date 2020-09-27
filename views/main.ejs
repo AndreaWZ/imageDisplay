@@ -1,11 +1,11 @@
 <%- include("partials/header") %>
-<ul>
+<div class="container">
     <% info["photos"].forEach(function(image){ %>
-        <li>
+        <div class="">
             <img src="<%= image.src.original %>" />
             <p>Photographer: <strong><%= image.photographer %></strong></p>
-        </li>
+        </div>
     <% }) %>
-</ul>
+</div>
 
 <%- include("partials/footer") %>

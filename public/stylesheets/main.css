@@ -2,11 +2,13 @@ body {
     background-color: aquamarine;
 }
 
-ul {
-    list-style: none;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(5, auto);  
 }
 
 img {
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: auto;
 }

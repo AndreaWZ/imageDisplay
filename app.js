@@ -11,7 +11,7 @@ const data = {
 app.set("view engine","ejs");
 
 app.get("/", function(req, res){
-    res.send("Hi There!!!");
+    res.render("main");
 });
 
 request(data, function(error,response, body){

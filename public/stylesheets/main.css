@@ -1,13 +1,25 @@
 body {
-  margin-top: 30px;
   background-color: antiquewhite;
   text-align: center; }
 
+.navbar {
+  position: fixed;
+  background-color: #282828;
+  width: 100%;
+  border-radius: 0; }
+  .navbar .navbar-brand {
+    color: white; }
+  .navbar .form-inline {
+    margin: 8px;
+    float: right;
+    padding-right: 10px; }
+
 .container {
+  padding-top: 80px;
   display: inline-block;
-  column-width: 170px;
+  column-width: 165px;
   column-gap: 10px;
-  width: 360px; }
+  width: 400px; }
   @media (min-width: 576px) {
     .container {
       width: 540px; } }
@@ -44,12 +56,17 @@ body {
     padding-right: 8px;
     text-align: end; }
 
-.pexels {
+.container-sm {
   float: left;
-  padding-left: 90px;
-  margin-bottom: 30px; }
-  .pexels h4 {
-    text-align: initial; }
-  .pexels img {
-    width: 400px;
-    height: 120px; }
+  padding-left: 30px;
+  padding-bottom: 20px;
+  background-color: #282828;
+  width: 100%; }
+  .container-sm h4 {
+    text-align: initial;
+    font-size: 15px;
+    color: white; }
+  .container-sm img {
+    float: left;
+    width: 150px;
+    height: 50px; }

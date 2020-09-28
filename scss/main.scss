@@ -46,16 +46,34 @@ $screen-xl-min: 1200px;
 }
 
 body {
-    margin-top: 30px ;
     background-color: antiquewhite;
     text-align: center;
 }
 
+.navbar {
+    position: fixed;
+    background-color: #282828;
+    width: 100%;
+    border-radius: 0;
+    .navbar-brand {
+        color:white;
+    }
+    .form-inline {
+        margin: 8px;
+        float: right;
+        padding-right: 10px;
+        // .btn {
+        //     color:green;
+        // }
+    } 
+}
+
 .container {
+    padding-top: 80px;
     display: inline-block;
-    column-width: 170px;
+    column-width: 165px;
     column-gap: 10px;
-    width: 360px;
+    width: 400px;
 
     @include sm {
         width: 540px;
@@ -101,17 +119,21 @@ body {
         }
 }
 
-.pexels {
+.container-sm {
     float: left;
-    padding-left: 90px;
-    margin-bottom: 30px;
-
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color: #282828;
+    width: 100%;
     h4{
         text-align: initial;
+        font-size: 15px;
+        color: white;
     }
 
     img {
-        width: 400px;
-        height: 120px;
+        float: left;
+        width: 150px;
+        height: 50px;
     }
 }

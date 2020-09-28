@@ -2,7 +2,7 @@
 <div class="container">
     <% info["photos"].forEach(function(image){ %>
         <div class="thumbnail">
-                <img src="<%= image.src.original %>" />
+                <img src="<%= image.src.large %>" />
                 <p>By: <strong><%= image.photographer %></strong></p>
         </div>
     <% }) %>

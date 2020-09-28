@@ -1,9 +1,9 @@
 <%- include("partials/header") %>
 <div class="container">
     <% info["photos"].forEach(function(image){ %>
-        <div class="">
+        <div class="imageDesc">
             <img src="<%= image.src.original %>" />
-            <p>Photographer: <strong><%= image.photographer %></strong></p>
+            <p><strong><%= image.photographer %></strong></p>
         </div>
     <% }) %>
 </div>

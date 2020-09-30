@@ -1,1 +1,13 @@
-<h1>RESULTS ROUTE</h1>
+<%- include("partials/header") %>
+
+<h1><%= query %></h1>
+<div class="container">
+    <% results["photos"].forEach(function(image){ %>
+        <div class="thumbnail">
+                <img src="<%= image.src.large %>" />
+                <p>By: <strong><%= image.photographer %></strong></p>
+        </div>
+    <% }) %>
+</div>
+
+<%- include("partials/footer") %>

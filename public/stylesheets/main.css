@@ -14,8 +14,12 @@ body {
     float: right;
     padding-right: 10px; }
 
+h1 {
+  margin: 0;
+  padding-top: 85px; }
+
 .container {
-  padding-top: 80px;
+  padding-top: 25px;
   display: inline-block;
   column-width: 165px;
   column-gap: 10px;

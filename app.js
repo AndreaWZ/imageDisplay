@@ -23,6 +23,10 @@ app.get("/", function(req, res){
     });
 });
 
+app.post("/:name/results", function(req, res){
+    res.render("results");
+});
+
 app.listen(3000, function(){
     console.log("Server Running");
 });

@@ -10,7 +10,7 @@ app.use(express.static(__dirname + "/public"));
 app.get("/", function(req, res){
     const query = "spring";
     const data = {
-        url : "https://api.pexels.com/v1/search/?page=2\u0026per_page=30\u0026query=" + query,
+        url : "https://api.pexels.com/v1/search/?page=1\u0026per_page=30\u0026query=" + query,
         headers: {
         'Authorization': apiKey
         } 
@@ -18,8 +18,6 @@ app.get("/", function(req, res){
     request(data, function(error,response, body){
         if(!error && response.statusCode == 200){
             const info = JSON.parse(body);
-            // console.log("info: " + info);
-            // console.log("body: " + body);
             res.render("main", {info});
         };
     });
@@ -28,7 +26,7 @@ app.get("/", function(req, res){
 app.get("/results", function(req, res){
     const query = req.query.search;
     const data = {
-        url : "https://api.pexels.com/v1/search/?page=2\u0026per_page=30\u0026query=" + query,
+        url : "https://api.pexels.com/v1/search/?page=1\u0026per_page=50\u0026query=" + query,
         headers: {
         'Authorization': apiKey
         } 
@@ -36,7 +34,11 @@ app.get("/results", function(req, res){
     request(data, function(error,response, body){
         if(!error && response.statusCode == 200){
             const results = JSON.parse(body);
-            res.render("results", {results, query});
+            if(results.total_results !== 0){
+                res.render("results", {results, query});
+            } else {
+                res.render("noFound");
+            }
         };
     });
 });

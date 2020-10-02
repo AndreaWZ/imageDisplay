@@ -8,9 +8,9 @@ app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res){
-    const query = "spring";
+    const query = "fall";
     const data = {
-        url : "https://api.pexels.com/v1/search/?page=1\u0026per_page=30\u0026query=" + query,
+        url : "https://api.pexels.com/v1/search/?page=1\u0026per_page=50\u0026query=" + query,
         headers: {
         'Authorization': apiKey
         } 
@@ -37,7 +37,7 @@ app.get("/results", function(req, res){
             if(results.total_results !== 0){
                 res.render("results", {results, query});
             } else {
-                res.render("noFound");
+                res.render("notFound");
             }
         };
     });

@@ -60,7 +60,11 @@ app.get("/results", function(req, res){
 
 app.get("/login", function(req, res){
     res.render("login");
-})
+});
+
+app.get("/register", function(req, res){
+    res.render("register");
+});
 
 app.listen(3000, function(){
     console.log("Server Running");

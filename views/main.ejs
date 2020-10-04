@@ -4,8 +4,11 @@
 <div class="container">
     <% info["photos"].forEach(function(image){ %>
         <div class="thumbnail">
-                <img src="<%= image.src.large %>" />
-                <p>By: <strong><%= image.photographer %></strong></p>
+                <img src="<%= image.src.medium %>" alt="<%= query %>"/>
+                <div class="info">
+                    <i id="icons" class='far fa-heart'></i>
+                    <p>By: <strong><%= image.photographer %></strong></p>
+                </div>
         </div>
     <% }) %>
 </div>

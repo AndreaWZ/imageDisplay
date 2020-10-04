@@ -48,6 +48,7 @@ $screen-xl-min: 1200px;
 body {
     background-color: antiquewhite;
     text-align: center;
+    width: fit-content;
 }
 
 .navbar {
@@ -62,10 +63,11 @@ body {
         margin: 8px;
         float: right;
         padding-right: 10px;
-        // .btn {
-        //     color:green;
-        // }
+        display: flex;
     } 
+    button {
+        margin-left: 5px;    
+    }
 }
 
 .notFound {
@@ -77,57 +79,80 @@ body {
 h1{
     margin: 0;
     padding-top: 85px;
+    text-align: inherit;
 }
 
 .container {
     padding-top: 25px;
     display: inline-block;
-    column-width: 165px;
+    column-width: 210px;
     column-gap: 10px;
-    width: 400px;
+    width: 480px;
 
     @include sm {
-        width: 540px;
+        column-width: 245px;
+        column-gap: 0px;
+        width: 562px;
     }
     @include md {
-        width: 720px;
+        column-width: 225px;
+        column-gap: 8px;
+        width: 750px;
     }
     @include lg {
         column-width: 220px;
         column-gap: 15px;
-        width: 940px;
+        width: 975px;
     }
     @include xl {
-        width: 1175px;
+        width: 1200px;
     }
     @include rwd(1400) {
-        column-gap: 30px;
+        column-gap: 10px;
         width: 1250px;
+    }
+}
+
+%image-sizes {
+    width: 210px;
+
+    @include sm {
+        width: 245px;
+    }
+    @include md {
+        width: 225px;
+    }
+    @include lg {
+        width: 220px;
     }
 }
 
 .thumbnail {
     display: inline-block;
-    width: 170px;
     padding: 0px;
+    @extend %image-sizes;
 
-        @include lg {
-            width: 220px;
+    img {
+        @extend %image-sizes;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        i {
+            font-size: 20px;
+            margin: 5px 0 5px 0;
+            padding-left: 10px;
+            cursor: pointer;
         }
-
-        img {
-            //mobile
-            width: 170px;
-            
-            @include lg {
-                width: 220px;
-            }
+        i:hover {
+            color: red;
         }
         p {
             margin: 5px 0 5px 0;
             padding-right: 8px;
             text-align: end;
         }
+    }
 }
 
 .container-sm {
@@ -136,12 +161,12 @@ h1{
     padding-bottom: 20px;
     background-color: #282828;
     width: 100%;
+
     h4{
         text-align: initial;
         font-size: 15px;
         color: white;
     }
-
     img {
         float: left;
         width: 150px;
